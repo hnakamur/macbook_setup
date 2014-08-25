@@ -6,6 +6,8 @@
     - hnakamur.osx-defaults
     - hnakamur.homebrew-packages
     - hnakamur.homebrew-cask-packages
+    - { role: hnakamur.osx-git,
+        git_user_name: "_Your_name_here_", git_user_email: "_Your_email_here_" }
     - hnakamur.osx-login-shell
     - hnakamur.oh-my-zsh
     - hnakamur.homebrew-path

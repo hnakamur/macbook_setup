@@ -54,6 +54,13 @@ cd macbook_setup
 ## 5. Ansibleを使って各種ソフトウェアをセットアップ
 
 必要に応じてlocalhost.ymlを書き換えてカスタマイズしてください。
+git_user_nameとgit_user_emailの値は必ず書き換えてください。
+
+```
+    - { role: hnakamur.osx-git,
+        git_user_name: "_Your_name_here_", git_user_email: "_Your_email_here_" }
+```
+
 ターミナルで以下のコマンドを実行します。
 
 ```
