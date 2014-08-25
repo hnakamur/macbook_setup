@@ -13,5 +13,5 @@
     - hnakamur.osx-vim
     - hnakamur.osx-tmux
     - hnakamur.osx-direnv
-    - hnakamur.osx-ruby
+    - hnakamur.osx-rbenv
     - hnakamur.osx-node-js
