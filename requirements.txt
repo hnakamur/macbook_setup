@@ -1,0 +1,13 @@
+hnakamur.osx-git,
+hnakamur.osx-defaults
+hnakamur.homebrew-packages
+hnakamur.homebrew-cask-packages
+hnakamur.osx-login-shell
+hnakamur.oh-my-zsh
+hnakamur.homebrew-path
+hnakamur.osx-go
+hnakamur.osx-vim
+hnakamur.osx-tmux
+hnakamur.osx-direnv
+hnakamur.osx-rbenv
+hnakamur.osx-node-js
