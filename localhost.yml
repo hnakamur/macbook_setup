@@ -15,5 +15,4 @@
     - hnakamur.osx-vim
     - hnakamur.osx-tmux
     - hnakamur.osx-direnv
-    - hnakamur.osx-rbenv
-    - hnakamur.osx-node-js
+    - hnakamur.anyenv
