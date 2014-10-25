@@ -3,6 +3,7 @@ zsh_rc_dir: ~/.zshrc.d
 zsh_rc_files:
 - git.zsh
 - git-prompt.sh
+- path.zsh
 - prompt.zsh
 zsh_rc_templates:
 - history.zsh
