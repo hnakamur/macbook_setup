@@ -3,6 +3,7 @@
   gather_facts: yes
   sudo: no
   roles:
+    - hnakamur.git
     - hnakamur.zsh
 #    - hnakamur.ruby
 #    - hnakamur.osx-defaults
