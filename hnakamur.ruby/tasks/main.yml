@@ -1,0 +1,28 @@
+---
+- apt: name={{ item }} state=present
+  with_items:
+  - libssl-dev
+  - libcurl4-openssl-dev
+  - libreadline-dev
+  when: ansible_os_family == "Debian"
+
+- homebrew: name={{ item }} state=present
+  with_items:
+  - openssl
+  - readline
+  when: ansible_os_family == "Darwin"
+
+- file: path={{ ruby_build_dir|dirname }} state=directory
+
+- git: repo=https://github.com/sstephenson/ruby-build.git dest={{ ruby_build_dir }} update=yes
+
+- command: ./bin/ruby-build {{ ruby_version }} {{ ruby_install_dir }}
+    chdir={{ ruby_build_dir }}
+    creates={{ ruby_bin_dir }}/ruby
+  environment:
+    MAKE_OPTS: "-j 4"
+
+- gem: name={{ item }} user_install=no state=present
+  with_items: ruby_global_gems
+  environment:
+    PATH: "{{ ruby_bin_dir }}:{{ lookup('env', 'PATH') }}"

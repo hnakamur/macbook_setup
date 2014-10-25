@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Hiroaki Nakamura
+  description: Install ruby using ruby-build
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  - name: Darwin
+    versions:
+    - all
+  categories:
+  - development
+dependencies: []
