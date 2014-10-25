@@ -1,0 +1,34 @@
+[user]
+	name = {{ git_global_user_name }}
+	email = {{ git_global_user_email }}
+[core]
+	excludesfile = {{ git_global_ignore_file }}
+[merge]
+	ff = true
+[log]
+	date = local
+[push]
+	default = simple
+[alias]
+	a = add
+	co = checkout
+	ci = commit -v
+	b = branch
+	d = diff -w
+	di = diff
+	f = fetch --all --prune
+	l = log
+	me = merge
+	s = status -s
+	lga = log --graph --all --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
+	lg  = log --graph --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
+	conflicts = diff --name-only --diff-filter=U
+
+[pager]
+        log = diff-highlight | less
+        show = diff-highlight | less
+        diff = diff-highlight | less
+{% if ansible_os_family == "Darwin" %}
+[credential]
+	helper = osxkeychain
+{% endif %}
