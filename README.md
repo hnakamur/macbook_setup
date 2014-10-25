@@ -76,12 +76,12 @@ cd macbook_setup
 ## 6. Ansibleを使って各種ソフトウェアをセットアップ
 
 host_vars/localhost.yml.sampleをhost_vars/localhost.ymlにコピーし、
-git_user_nameとgit_user_emailの値を必ず書き換えてください。
+git_global_user_nameとgit_global_user_emailの値を必ず書き換えてください。
 
 ```
 ---
-git_user_name: "YOUR_NAME_HERE"
-git_user_email: YOUR_EMAIL_HERE@example.com
+git_global_user_name: "YOUR_NAME_HERE"
+git_global_user_email: YOUR_EMAIL_HERE@example.com
 ```
 
 ターミナルで以下のコマンドを実行します。
