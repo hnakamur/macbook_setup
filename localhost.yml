@@ -5,6 +5,7 @@
   roles:
     - hnakamur.git
     - hnakamur.zsh
+    - hnakamur.direnv
     - hnakamur.go
     - hnakamur.vim
 #    - hnakamur.ruby
@@ -12,4 +13,3 @@
 #    - hnakamur.homebrew-packages
 #    - hnakamur.homebrew-cask-packages
 #    - hnakamur.osx-tmux
-#    - hnakamur.osx-direnv
