@@ -1,0 +1,8 @@
+---
+- osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
+  notify: killall Finder
+  with_items: osx_defaults_finder_values
+
+- osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
+  notify: killall SystemUIServer
+  with_items: osx_defaults_system_ui_server_values
