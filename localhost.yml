@@ -3,6 +3,7 @@
   gather_facts: yes
   sudo: no
   roles:
+    - hnakamur.homebrew_packages
     - hnakamur.osx_defaults
     - hnakamur.git
     - hnakamur.zsh
@@ -11,5 +12,4 @@
     - hnakamur.vim
     - hnakamur.tmux
 #    - hnakamur.ruby
-#    - hnakamur.homebrew-packages
 #    - hnakamur.homebrew-cask-packages
