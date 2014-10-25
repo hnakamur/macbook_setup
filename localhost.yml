@@ -5,6 +5,7 @@
   roles:
     - hnakamur.git
     - hnakamur.zsh
+    - hnakamur.go
 #    - hnakamur.ruby
 #    - hnakamur.osx-defaults
 #    - hnakamur.homebrew-packages
