@@ -14,4 +14,5 @@ homebrew_cask_packages_packages:
 - spark
 - vagrant
 - virtualbox
+- xquartz
 - zeroxed
