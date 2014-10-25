@@ -12,3 +12,4 @@ zsh_enable_history_sharing: False
 zsh_history_file: ~/.zsh_history
 zsh_history_memory_size: 1000000
 zsh_history_disk_size:   1000000
+zsh_bindkey_type: emacs
