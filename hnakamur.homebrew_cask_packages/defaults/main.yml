@@ -1,0 +1,17 @@
+---
+homebrew_cask_packages_packages:
+- calibre
+- firefox
+- google-chrome
+- google-japanese-ime
+- grandperspective
+- hipchat
+- iterm2
+- java
+- keepassx
+- mysqlworkbench
+- skype
+- spark
+- vagrant
+- virtualbox
+- zeroxed
