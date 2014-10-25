@@ -1,0 +1,13 @@
+---
+- file: path={{ node_build_dir|dirname }} state=directory
+
+- git: repo=https://github.com/OiNutter/node-build.git dest={{ node_build_dir }} update=yes
+
+- command: ./bin/node-build {{ node_version }} {{ node_install_dir }}
+    chdir={{ node_build_dir }}
+    creates={{ node_bin_dir }}/node
+
+- npm: name={{ item }} global=yes
+  with_items: node_global_packages
+  environment:
+    PATH: "{{ node_bin_dir }}:{{ lookup('env', 'PATH') }}"
