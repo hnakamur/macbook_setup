@@ -8,8 +8,8 @@
     - hnakamur.direnv
     - hnakamur.go
     - hnakamur.vim
+    - hnakamur.tmux
 #    - hnakamur.ruby
 #    - hnakamur.osx-defaults
 #    - hnakamur.homebrew-packages
 #    - hnakamur.homebrew-cask-packages
-#    - hnakamur.osx-tmux
