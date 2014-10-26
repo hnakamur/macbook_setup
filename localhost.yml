@@ -15,3 +15,12 @@
   - hnakamur.node
   - hnakamur.homebrew_cask_packages
   - hnakamur.osx_vlgothic_fonts
+  - role: hnakamur.osx_noto_sans_fonts
+    osx_noto_sans_fonts_zip_filename: NotoSans-unhinted.zip
+    osx_noto_sans_fonts_creates_font_filename: NotoSans-Regular.ttf
+  - role: hnakamur.osx_noto_sans_fonts
+    osx_noto_sans_fonts_zip_filename: NotoSerif-unhinted.zip
+    osx_noto_sans_fonts_creates_font_filename: NotoSerif-Regular.ttf
+  - role: hnakamur.osx_noto_sans_fonts
+    osx_noto_sans_fonts_zip_filename: NotoSansJapanese-hinted.zip
+    osx_noto_sans_fonts_creates_font_filename: NotoSansJP-Regular.otf

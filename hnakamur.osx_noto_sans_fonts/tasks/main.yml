@@ -1,0 +1,10 @@
+---
+- stat: path={{ osx_noto_sans_fonts_install_dir }}/{{ osx_noto_sans_fonts_creates_font_filename }}
+  register: st
+  changed_when: false
+
+- get_url: url={{ osx_noto_sans_fonts_zip_url_base }}/{{ osx_noto_sans_fonts_zip_filename }} dest={{ osx_noto_sans_fonts_download_dir }}/{{ osx_noto_sans_fonts_zip_filename }} 
+  when: not st.stat.exists
+
+- unarchive: src={{ osx_noto_sans_fonts_download_dir }}/{{ osx_noto_sans_fonts_zip_filename }} dest={{ osx_noto_sans_fonts_install_dir }} copy=no
+  when: not st.stat.exists
