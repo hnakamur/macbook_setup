@@ -26,3 +26,6 @@
   with_items: ruby_global_gems
   environment:
     PATH: "{{ ruby_bin_dir }}:{{ lookup('env', 'PATH') }}"
+
+- file: src={{ ruby_install_dir }} dest={{ ruby_link_dir }} state=link
+  when: ruby_switch_link
