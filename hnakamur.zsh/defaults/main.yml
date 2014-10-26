@@ -7,6 +7,13 @@ zsh_rc_files:
 - prompt.zsh
 zsh_rc_templates:
 - history.zsh
+zsh_path_directories:
+- "$HOME/bin"
+- /usr/local/ruby/bin
+- /usr/local/node/bin
+- "$HOME/go/bin"
+zsh_my_bin_files:
+- modipath
 zsh_login_shell: /bin/zsh
 zsh_enable_history_sharing: False
 zsh_history_file: ~/.zsh_history

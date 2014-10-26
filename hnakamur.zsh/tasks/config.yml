@@ -1,4 +1,6 @@
 ---
+- template: src=zshenv.j2 dest=~/.zshenv
+
 - file: path={{ zsh_rc_dir }} state=directory
 
 - copy: src={{ item }} dest={{ zsh_rc_dir }}/{{ item }}
