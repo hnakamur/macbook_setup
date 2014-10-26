@@ -1,6 +1,8 @@
 ---
 node_version: 0.10.32
 node_install_dir: /usr/local/node-{{ node_version }}
+node_link_dir: /usr/local/node
+node_switch_link: True
 node_build_dir: /usr/local/src/node-build
 node_global_packages:
 - grunt-cli

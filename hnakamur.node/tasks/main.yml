@@ -11,3 +11,6 @@
   with_items: node_global_packages
   environment:
     PATH: "{{ node_bin_dir }}:{{ lookup('env', 'PATH') }}"
+
+- file: src={{ node_install_dir }} dest={{ node_link_dir }} state=link
+  when: node_switch_link
