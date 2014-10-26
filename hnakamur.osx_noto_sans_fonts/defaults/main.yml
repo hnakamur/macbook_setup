@@ -1,0 +1,4 @@
+---
+osx_noto_sans_fonts_zip_url_base: https://www.google.com/get/noto/pkgs/
+osx_noto_sans_fonts_download_dir: ~/Downloads
+osx_noto_sans_fonts_install_dir: ~/Library/Fonts

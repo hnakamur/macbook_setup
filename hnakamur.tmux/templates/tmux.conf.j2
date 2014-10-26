@@ -1,0 +1,34 @@
+# Set prefix to C-t
+unbind C-b
+set-option -g prefix C-t
+bind C-t send-prefix
+
+# NOTE: These bindings did not work in tmux 1.9a.
+# http://stackoverflow.com/questions/15470001/bind-ctrltab-and-ctrlshifttab-in-tmux
+# # window navigation
+# bind-key C-Tab next-window
+# bind-key C-S-Tab previous-window
+
+# Do nothing when I mistype C-z C-o instead of C-z o
+unbind C-o
+
+# Stay in the same directory when split panes.
+# http://qiita.com/okuramasafumi/items/72f61ec0af56b7b9b292
+unbind %
+bind-key % split-window -h -c "#{pane_current_path}"
+unbind '"'
+bind-key '"' split-window -v -c "#{pane_current_path}"
+
+# Reload config
+bind-key C-r source ~/.tmux.conf
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# Setup 'v' to begin selection as in Vim
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"

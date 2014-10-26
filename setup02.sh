@@ -1,3 +1,2 @@
-#!/bin/bash -x
-ansible-galaxy install --roles=. -r requirements.txt --force
+#!/bin/sh
 ansible-playbook localhost.yml

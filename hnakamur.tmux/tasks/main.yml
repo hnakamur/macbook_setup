@@ -1,0 +1,7 @@
+---
+- homebrew: name={{ item }} state=present
+  with_items:
+  - tmux
+  - reattach-to-user-namespace
+
+- template: src=tmux.conf.j2 dest=~/.tmux.conf

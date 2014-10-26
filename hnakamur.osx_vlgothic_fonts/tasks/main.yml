@@ -1,0 +1,14 @@
+---
+- stat: path={{ osx_vlgothic_fonts_install_dir }}/{{ osx_vlgothic_fonts_creates_font_filename }}
+  register: st
+  changed_when: false
+
+- get_url: url={{ osx_vlgothic_fonts_download_url }} dest={{ osx_vlgothic_fonts_download_dir }}/{{ osx_vlgothic_fonts_zip_filename }} 
+  when: not st.stat.exists
+
+- unarchive: src={{ osx_vlgothic_fonts_download_dir }}/{{ osx_vlgothic_fonts_zip_filename }} dest={{ lookup('env', 'TMPDIR') }} copy=no
+  when: not st.stat.exists
+
+- copy: src={{ lookup('env', 'TMPDIR') }}/VLGothic/{{ item }} dest={{ osx_vlgothic_fonts_install_dir }}/{{ item }}
+  when: not st.stat.exists
+  with_items: osx_vlgothic_fonts_font_filenames

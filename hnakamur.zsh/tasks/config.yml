@@ -1,0 +1,15 @@
+---
+- template: src=zshenv.j2 dest=~/.zshenv
+
+- file: path={{ zsh_rc_dir }} state=directory
+
+- copy: src={{ item }} dest={{ zsh_rc_dir }}/{{ item }}
+  with_items: zsh_rc_files
+
+- template: src={{ item }}.j2 dest={{ zsh_rc_dir }}/{{ item }}
+  with_items: zsh_rc_templates
+
+- template: src=bindkey.zsh.j2 dest={{ zsh_rc_dir }}/bindkey.zsh
+  when: zsh_bindkey_type in ["emacs", "vi"]
+
+- template: src=zshrc.j2 dest=~/.zshrc

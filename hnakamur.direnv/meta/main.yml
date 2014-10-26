@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Hiroaki Nakamura
+  description: An Ansible role to setup direnv on OS X
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Darwin
+    versions:
+    - all
+  categories:
+  - system
+dependencies:
+- hnakamur.zsh

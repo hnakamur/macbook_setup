@@ -1,0 +1,6 @@
+---
+- include: config.yml
+
+- include: my_scripts.yml
+
+- include: login_shell.yml

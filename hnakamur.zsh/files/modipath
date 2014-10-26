@@ -1,0 +1,59 @@
+#!/bin/zsh
+
+# modipath
+#
+# Setup:
+#   Install this script in ~/bin and add $HOME/bin to the PATH environment.
+#   export PATH="$HOME/bin:$PATH"
+#
+# Examples:
+# * Example#1: remove /usr/local/ruby/bin from PATH
+#     eval $(modipath remove /usr/local/ruby/bin)
+# * Example#2: prepend /usr/local/ruby-2.1.3/bin to PATH
+#     eval $(modipath prepend /usr/local/ruby-2.1.3/bin)
+#
+# I suppose to use this script with [zimbatm/direnv](https://github.com/zimbatm/direnv)
+# An example of .envrc:
+#
+# ```
+# eval $(modipath remove /usr/local/ruby/bin)
+# eval $(modipath prepend /usr/local/ruby-2.1.3/bin)
+# ```
+
+usage() {
+  PROGNAME=$(basename $0)
+  echo "Usage: $PROGNAME (prepend|append|remove) directory" 1>&2
+  exit 1
+}
+
+if [ $# -ne 2 ]; then
+  usage
+fi
+
+operation="$1"
+directory="$2"
+
+newpath() {
+  case "$operation" in
+  prepend)
+    echo "$directory:$PATH"
+    ;;
+  append)
+    echo "$PATH:$directory"
+    ;;
+  remove)
+    directories=(${(s/:/)PATH})
+    directories=("${(@)directories:#$directory}")
+    echo ${(j/:/)directories}
+    ;;
+  esac
+}
+
+case "$operation" in
+prepend|append|remove)
+  echo "export PATH=\"$(newpath)\""
+  ;;
+*)
+  usage
+  ;;
+esac

@@ -1,0 +1,9 @@
+{% if zsh_enable_history_sharing %}
+setopt SHARE_HISTORY
+{% else %}
+unsetopt SHARE_HISTORY
+{% endif %}
+
+HISTFILE={{ zsh_history_file }}
+HISTSIZE={{ zsh_history_memory_size }}
+SAVEHIST={{ zsh_history_disk_size }}

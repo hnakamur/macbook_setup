@@ -1,0 +1,22 @@
+---
+zsh_rc_dir: ~/.zshrc.d
+zsh_rc_files:
+- git.zsh
+- git_completion.zsh
+- git-prompt.sh
+- prompt.zsh
+zsh_rc_templates:
+- history.zsh
+zsh_path_directories:
+- "$HOME/bin"
+- /usr/local/ruby/bin
+- /usr/local/node/bin
+- "$HOME/go/bin"
+zsh_my_bin_files:
+- modipath
+zsh_login_shell: /bin/zsh
+zsh_enable_history_sharing: False
+zsh_history_file: ~/.zsh_history
+zsh_history_memory_size: 1000000
+zsh_history_disk_size:   1000000
+zsh_bindkey_type: emacs

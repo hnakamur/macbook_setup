@@ -1,0 +1,9 @@
+---
+- homebrew: name=git state=present
+  when: ansible_os_family == "Darwin"
+
+- pip: name=diff-highlight state=present
+
+- template: src=gitconfig.j2 dest=~/.gitconfig
+
+- template: src=gitignore.j2 dest={{ git_global_ignore_file }}

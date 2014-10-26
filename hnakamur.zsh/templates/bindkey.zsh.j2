@@ -1,0 +1,5 @@
+{% if zsh_bindkey_type == "emacs" %}
+bindkey -e
+{% elif zsh_bindkey_type == "vi" %}
+bindkey -v
+{% endif %}

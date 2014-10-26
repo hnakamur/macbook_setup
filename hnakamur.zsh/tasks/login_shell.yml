@@ -1,0 +1,20 @@
+---
+- shell: grep '^{{ zsh_login_shell }}$' /etc/shells
+  register: zsh_exists_in_etc_shells
+  changed_when: false
+  failed_when: zsh_exists_in_etc_shells.rc not in [0, 1]
+
+- lineinfile: dest=/etc/shells line={{ zsh_login_shell }} state=present owner=root group=wheel mode=0644
+  sudo: yes
+  when: zsh_exists_in_etc_shells.rc == 1
+
+
+- shell: dscl . read ~ UserShell | awk '{print $2}'
+  sudo: no
+  register: zsh_current_login_shell
+  changed_when: false
+  when: ansible_os_family == "Darwin"
+
+- shell: chsh -s zsh_login_shell {{ lookup('env', 'USER') }}
+  sudo: no
+  when: ansible_os_family == "Darwin" and zsh_current_login_shell.stdout != "{{ zsh_login_shell }}"

@@ -1,0 +1,25 @@
+---
+homebrew_packages_taps:
+- homebrew/binary
+- homebrew/dupes
+
+homebrew_packages_packages:
+- { name: cmake }
+- { name: ctags }
+- { name: docker }
+- { name: htop }
+- { name: jq }
+- { name: hub }
+- { name: imagemagick }
+- { name: mysql }
+- { name: packer }
+- { name: pkg-config }
+- { name: postgresql }
+- { name: pwgen }
+- { name: redis }
+- { name: subversion }
+- { name: the_silver_searcher }
+- { name: tig }
+- { name: whois }
+- { name: xz }
+- { name: wget }

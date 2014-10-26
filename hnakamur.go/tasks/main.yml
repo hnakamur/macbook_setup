@@ -1,0 +1,8 @@
+---
+- homebrew: name={{ item }} state=latest
+  with_items:
+  - go
+  - git
+  - mercurial
+
+- template: src=go.zsh.j2 dest={{ zsh_rc_dir }}/go.zsh
