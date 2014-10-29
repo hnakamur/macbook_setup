@@ -5,4 +5,6 @@
   - git
   - mercurial
 
+- file: path={{ go_gopath }} state=directory
+
 - template: src=go.zsh.j2 dest={{ zsh_rc_dir }}/go.zsh
