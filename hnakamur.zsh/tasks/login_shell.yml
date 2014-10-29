@@ -15,6 +15,6 @@
   changed_when: false
   when: ansible_os_family == "Darwin"
 
-- shell: chsh -s zsh_login_shell {{ lookup('env', 'USER') }}
+- shell: chsh -s {{ zsh_login_shell }} {{ lookup('env', 'USER') }}
   sudo: no
   when: ansible_os_family == "Darwin" and zsh_current_login_shell.stdout != "{{ zsh_login_shell }}"
