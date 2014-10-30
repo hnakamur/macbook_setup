@@ -12,4 +12,7 @@
 - template: src=bindkey.zsh.j2 dest={{ zsh_rc_dir }}/bindkey.zsh
   when: zsh_bindkey_type in ["emacs", "vi"]
 
+- template: src={{ item }}.j2 dest={{ zsh_rc_dir }}/{{ item }}
+  with_items: zsh_additional_config_files
+
 - template: src=zshrc.j2 dest=~/.zshrc

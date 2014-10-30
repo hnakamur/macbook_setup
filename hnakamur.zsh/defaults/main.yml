@@ -18,6 +18,8 @@ zsh_envs:
   value: "{{ go_gopath }}"
 zsh_my_bin_files:
 - modipath
+zsh_additional_config_files:
+- aliases.zsh
 zsh_login_shell: /bin/zsh
 zsh_enable_history_sharing: False
 zsh_history_file: ~/.zsh_history
