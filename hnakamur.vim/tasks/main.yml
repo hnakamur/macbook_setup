@@ -4,7 +4,7 @@
   - vim
   - reattach-to-user-namespace
 
-- shell: go get github.com/nsf/gocode creates={{ go_gopath }}/src/github.com/nsf/gocode
+- command: go get github.com/nsf/gocode creates={{ go_gopath }}/src/github.com/nsf/gocode
 
 - template: src=vim.zsh.j2 dest={{ zsh_rc_dir }}/vim.zsh
 

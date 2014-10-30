@@ -1,1 +1,4 @@
 export PATH="{% for d in zsh_path_directories %}{{ d }}:{% endfor %}$PATH"
+{% for env in zsh_envs %}
+export {{ env.name }}={{ env.value }}
+{% endfor %}

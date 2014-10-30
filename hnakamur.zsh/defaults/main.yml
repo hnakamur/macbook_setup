@@ -9,9 +9,13 @@ zsh_rc_templates:
 - history.zsh
 zsh_path_directories:
 - "$HOME/bin"
+- "$HOME/go/bin"
 - /usr/local/ruby/bin
 - /usr/local/node/bin
-- "$HOME/go/bin"
+- /usr/local/bin
+zsh_envs:
+- name: GOPATH
+  value: "{{ go_gopath }}"
 zsh_my_bin_files:
 - modipath
 zsh_login_shell: /bin/zsh
