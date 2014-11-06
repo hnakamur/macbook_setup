@@ -24,6 +24,7 @@
 	lga = log --graph --all --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
 	lg  = log --graph --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
 	conflicts = diff --name-only --diff-filter=U
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -n 1 git branch -d
 
 [pager]
         log = diff-highlight | less
