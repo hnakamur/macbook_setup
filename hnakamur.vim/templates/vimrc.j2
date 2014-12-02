@@ -12,12 +12,12 @@ filetype plugin indent off
 set ambiwidth=double
 
 " config for Go
-let g:gofmt_command = 'goimports'
-set rtp^=/usr/local/opt/go/libexec/misc/vim
-set rtp^=${GOPATH}/src/github.com/nsf/gocode/vim
-au BufWritePre *.go Fmt
-au FileType go setl sw=4 ts=4 sts=4 noet
-au FileType go setl makeprg=go\ build errorformat=%f:%l:\ %m
+"let g:gofmt_command = 'goimports'
+"set rtp^=/usr/local/opt/go/libexec/misc/vim
+"set rtp^=${GOPATH}/src/github.com/nsf/gocode/vim
+"au BufWritePre *.go Fmt
+"au FileType go setl sw=4 ts=4 sts=4 noet
+"au FileType go setl makeprg=go\ build errorformat=%f:%l:\ %m
 
 au FileType javascript setl sw=2 ts=2 et
 au FileType html setl sw=2 ts=2 et
