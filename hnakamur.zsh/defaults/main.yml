@@ -12,6 +12,7 @@ zsh_path_directories:
 - "$HOME/go/bin"
 - /usr/local/ruby/bin
 - /usr/local/node/bin
+- /usr/local/sbin
 - /usr/local/bin
 zsh_envs:
 - name: GOPATH
