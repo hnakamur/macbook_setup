@@ -1,5 +1,5 @@
 ---
-ruby_version: 2.1.4
+ruby_version: 2.1.5
 ruby_install_dir: /usr/local/ruby-{{ ruby_version }}
 ruby_link_dir: /usr/local/ruby
 ruby_switch_link: True
