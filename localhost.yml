@@ -20,7 +20,7 @@
     - virtualbox
     - xquartz
     - webstorm
-    - zeroxed
+#    - zeroxed
   roles:
   - role: hnakamur.homebrew_packages
     tags: homebrew_packages
