@@ -28,7 +28,7 @@ function say(message) {
 
 function installXcode() {
   var installed = false
-  var storeApp = Application("App Store")
+  var storeApp = Application('App Store')
   storeApp.activate()
 
   var storeProc = Application('System Events').processes.byName('App Store')
@@ -70,13 +70,13 @@ function getInstallButton(win) {
 }
 
 function letUserAgreeToXcodeLicense() {
-  var xcodeApp = Application("Xcode")
+  var xcodeApp = Application('Xcode')
   xcodeApp.activate()
-  say("エックスコードのライセンスに同意してください")
+  say('エックスコードのライセンスに同意してください')
 }
 
 if (installXcode()) {
   letUserAgreeToXcodeLicense()
 } else {
-  say("エックスコードはすでにインストールされていました")
+  say('エックスコードはすでにインストールされていました')
 }
